@@ -55,10 +55,11 @@
         .section {
             max-width: 1100px;
             margin: 60px auto;
-            text-align: left;
+            text-align: center;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            padding: 20px;
         }
         .grid {
             display: flex;
@@ -81,9 +82,9 @@
             color: #777;
         }
         @media (max-width: 768px) {
-            .container {
-                margin: 20px;
-                padding: 30px;
+            .container, .section {
+                margin: 10px;
+                padding: 20px;
             }
             .grid {
                 flex-direction: column;
@@ -105,8 +106,8 @@
     </div>
     
     <div class="section">
-        <h2>Pourquoi abandonner Excel ?</h2>
-        <p>Excel est puissant mais limité pour gérer des processus complexes. Il devient vite ingérable, sujet aux erreurs et peu collaboratif.</p>
+        <h2>À propos de moi</h2>
+        <p>Je suis un expert en développement d’applications et en automatisation des processus métier. Ma mission est d’aider les PME à se libérer des outils obsolètes et à adopter des solutions modernes et efficaces.</p>
     </div>
     
     <div class="section">
@@ -125,6 +126,16 @@
                 <p>Formation et mise en place pour assurer une transition fluide.</p>
             </div>
         </div>
+    </div>
+    
+    <div class="section">
+        <h2>Contactez-moi</h2>
+        <form>
+            <input type="text" name="nom" placeholder="Votre Nom" required><br>
+            <input type="email" name="email" placeholder="Votre Email" required><br>
+            <textarea name="message" placeholder="Votre message" required></textarea><br>
+            <button type="submit">Envoyer</button>
+        </form>
     </div>
     
     <div class="footer">© 2025 Votre Entreprise - Tous droits réservés</div>
