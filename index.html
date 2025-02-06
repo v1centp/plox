@@ -76,6 +76,38 @@
             width: 60px;
             margin-bottom: 15px;
         }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #ff7b00, #ff5000);
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact-form button:hover {
+            background: linear-gradient(135deg, #e66a00, #d44700);
+        }
         .footer {
             margin-top: 40px;
             font-size: 1em;
@@ -91,10 +123,6 @@
                 align-items: center;
             }
         }
-        .show {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -103,11 +131,6 @@
         <h1>Simplifiez Votre Gestion</h1>
         <p>Optimisez vos processus métier avec une application sur mesure. Gagnez du temps, automatisez vos tâches et dites adieu aux fichiers Excel inefficaces.</p>
         <a href="https://calendly.com" target="_blank" class="cta-button">Réserver un appel</a>
-    </div>
-    
-    <div class="section">
-        <h2>À propos de moi</h2>
-        <p>Je suis un expert en développement d’applications et en automatisation des processus métier. Ma mission est d’aider les PME à se libérer des outils obsolètes et à adopter des solutions modernes et efficaces.</p>
     </div>
     
     <div class="section">
@@ -130,21 +153,16 @@
     
     <div class="section">
         <h2>Contactez-moi</h2>
-        <form>
-            <input type="text" name="nom" placeholder="Votre Nom" required><br>
-            <input type="email" name="email" placeholder="Votre Email" required><br>
-            <textarea name="message" placeholder="Votre message" required></textarea><br>
-            <button type="submit">Envoyer</button>
-        </form>
+        <div class="contact-form">
+            <form>
+                <input type="text" name="nom" placeholder="Votre Nom" required>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
     </div>
     
     <div class="footer">© 2025 Votre Entreprise - Tous droits réservés</div>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let sections = document.querySelectorAll(".container, .section");
-            sections.forEach(section => section.classList.add("show"));
-        });
-    </script>
 </body>
 </html>
