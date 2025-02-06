@@ -48,6 +48,26 @@
             background-color: #e66a00;
             transform: translateY(-3px);
         }
+        .section {
+            max-width: 1100px;
+            margin: 60px auto;
+            text-align: left;
+        }
+        .grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .grid-item {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+        .grid-item img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
         .footer {
             margin-top: 40px;
             font-size: 1em;
@@ -58,15 +78,9 @@
                 margin: 20px;
                 padding: 30px;
             }
-            h1 {
-                font-size: 2.2em;
-            }
-            p {
-                font-size: 1.2em;
-            }
-            .cta-button {
-                font-size: 1.2em;
-                padding: 14px 28px;
+            .grid {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -77,7 +91,32 @@
         <h1>Simplifiez Votre Gestion</h1>
         <p>Optimisez vos processus métier avec une application sur mesure. Gagnez du temps, automatisez vos tâches et dites adieu aux fichiers Excel inefficaces.</p>
         <a href="https://calendly.com" target="_blank" class="cta-button">Réserver un appel</a>
-        <div class="footer">© 2025 Votre Entreprise - Tous droits réservés</div>
     </div>
+    
+    <div class="section">
+        <h2>Pourquoi abandonner Excel ?</h2>
+        <p>Excel est puissant mais limité pour gérer des processus complexes. Il devient vite ingérable, sujet aux erreurs et peu collaboratif.</p>
+        <div class="grid">
+            <div class="grid-item">
+                <img src="https://img.icons8.com/ios/50/error.png" alt="Erreur">
+                <p>Erreurs fréquentes et pertes de données</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://img.icons8.com/ios/50/time.png" alt="Temps">
+                <p>Perte de temps sur des tâches répétitives</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://img.icons8.com/ios/50/collaboration.png" alt="Collaboration">
+                <p>Manque de collaboration et de flexibilité</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Qui suis-je ?</h2>
+        <p>Je suis un expert en automatisation et en développement d’applications avec Bubble.io. J’aide les PME à se libérer des contraintes d’Excel et à adopter des solutions modernes, sur mesure et évolutives.</p>
+    </div>
+    
+    <div class="footer">© 2025 Votre Entreprise - Tous droits réservés</div>
 </body>
 </html>
