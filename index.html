@@ -1,286 +1,33 @@
 <!DOCTYPE html>
+<script src="script.js"></script>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimisez Votre Gestion</title>
-    <!-- Using link to Google Fonts with &amp; properly escaped -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap">
-    <style>
-        /* =============================================
-           GLOBAL STYLES
-        ============================================== */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        /* Container for Hero Section */
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 40px;
-            background: white;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            opacity: 1; /* default visible */
-            transform: translateY(0);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 15px;
-            color: #222;
-        }
-        p {
-            font-size: 1.4em;
-            color: #555;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 16px 32px;
-            font-size: 1.4em;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(135deg, #ff7b00, #ff5000);
-            text-decoration: none;
-            border-radius: 50px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0px 5px 15px rgba(255, 123, 0, 0.3);
-        }
-        .cta-button:hover {
-            background: linear-gradient(135deg, #e66a00, #d44700);
-            transform: translateY(-3px);
-        }
-        /* =============================================
-           SECTION STYLES
-        ============================================== */
-        .section {
-            max-width: 1100px;
-            margin: 60px auto;
-            text-align: center;
-            opacity: 0; /* hidden until animated in */
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-            padding: 20px;
-            margin-bottom: 50px;
-        }
-        .grid {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .grid-item {
-            flex: 1;
-            min-width: 300px;
-            padding: 20px;
-            text-align: center;
-        }
-        .grid-item img {
-            width: 60px;
-            margin-bottom: 15px;
-        }
-        /* =============================================
-           CONTACT FORM
-        ============================================== */
-        .contact-form {
-            background: white;
-            padding: 30px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            max-width: 500px;
-            margin: auto;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .contact-form button {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #ff7b00, #ff5000);
-            color: white;
-            font-size: 1.2em;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .contact-form button:hover {
-            background: linear-gradient(135deg, #e66a00, #d44700);
-        }
-        /* =============================================
-           FOOTER STYLES
-        ============================================== */
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px; /* Ajout d'espacement sur mobile */
-            font-size: 1em;
-            color: #777;
-        }
-        @media (max-width: 768px) {
-            .container, .section {
-                margin: 10px;
-                padding: 20px;
-            }
-            .grid {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        /*
-         Test Cases:
-         1. Expect the hero section (container) to appear immediately.
-         2. Expect each .section to fade in (opacity -> 1) and slide up on scroll.
-         3. Clicking the 'Envoyer' button triggers form submission. (No JS event here, just built-in browser behavior.)
-         4. The user wants a final CTA in the hero.
-        */
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="container">
-        <h1>Simplifiez Votre Gestion</h1>
-        <p>Optimisez vos processus métier avec une application sur mesure. Gagnez du temps, automatisez vos tâches et dites adieu aux fichiers Excel inefficaces.</p>
-        <a href="https://calendly.com/vincent-porret" target="_blank" class="cta-button">Réserver un appel</a>
-    </div>
 
-    <!-- Pourquoi Moi -->
-    <div class="section">
-        <h2>Pourquoi Moi ?</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <h3>🚀 Rapidité</h3>
-                <p>Déploiement rapide de solutions adaptées à votre entreprise.</p>
-            </div>
-            <div class="grid-item">
-                <h3>🛠️ Sur Mesure</h3>
-                <p>Chaque application est construite en fonction de vos besoins spécifiques.</p>
-            </div>
-            <div class="grid-item">
-                <h3>🔒 Sécurité</h3>
-                <p>Vos données sont protégées avec les meilleures pratiques du marché.</p>
-            </div>
-        </div>
-    </div>
+    <div id="header"></div>
+    <div id="hero"></div>
+    <div id="pourquoi"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
 
-    <!-- Comment ça marche -->
-    <div class="section">
-        <h2>Comment ça marche ?</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <h3>1️⃣ Analyse</h3>
-                <p>Nous discutons de vos besoins et identifions les processus à optimiser.</p>
-            </div>
-            <div class="grid-item">
-                <h3>2️⃣ Développement</h3>
-                <p>Création d’une application sur mesure, adaptée à votre activité.</p>
-            </div>
-            <div class="grid-item">
-                <h3>3️⃣ Implémentation</h3>
-                <p>Formation et mise en place pour assurer une transition fluide.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Exemples d'Applications -->
-    <div class="section">
-        <h2>Exemples d'Applications</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <h3>📊 CRM</h3>
-                <p>Gérez vos relations clients avec une plateforme centralisée et automatisée.</p>
-            </div>
-            <div class="grid-item">
-                <h3>📋 Formulaires Terrain &amp; Admin</h3>
-                <p>Facilitez la communication entre employés sur le terrain et l'administration.</p>
-            </div>
-            <div class="grid-item">
-                <h3>📈 Dashboard</h3>
-                <p>Suivez vos KPI et prenez des décisions éclairées avec un tableau de bord personnalisé.</p>
-            </div>
-        </div>
-        <div class="grid">
-            <div class="grid-item">
-                <h3>👥 RH</h3>
-                <p>Optimisez la gestion des employés, des congés et des fiches de paie.</p>
-            </div>
-            <div class="grid-item">
-                <h3>⚙️ Gestion de Projet</h3>
-                <p>Coordonnez efficacement vos équipes et suivez l'avancement des tâches en temps réel.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Témoignages Clients -->
-    <div class="section">
-        <h2>Ce que disent nos clients</h2>
-        <div class="grid">
-            <div class="grid-item">
-                <p>⭐️⭐️⭐️⭐️⭐️ "Notre gestion est devenue ultra efficace grâce à cette solution. Je recommande vivement !"</p>
-                <p>- Jean Dupont, CEO Startup</p>
-            </div>
-            <div class="grid-item">
-                <p>⭐️⭐️⭐️⭐️⭐️ "Nous avons automatisé nos processus et gagné un temps précieux."</p>
-                <p>- Claire Martin, Responsable RH</p>
-            </div>
-        </div>
-    </div>
- <div class="section">
-        <h2>Qui suis-je ?</h2>
-        <p>Salut, moi, c’est Vincent ! J’ai 30 ans et je vis à Savigny, au-dessus de Lausanne.</p>
-        <p>Après un Master en Finance, j’ai eu l’opportunité d’évoluer dans des secteurs variés – banque, transport, industrie – au sein de petites structures comme de grands groupes. Ces expériences m’ont permis de comprendre les enjeux concrets des entreprises et d’identifier les défis qu’elles rencontrent au quotidien.</p>
-        <p>C’est en cherchant des solutions efficaces que j’ai découvert la programmation, une véritable révélation pour moi. Passionné, j’ai appris à coder pour automatiser des processus, simplifier le travail et rendre les outils plus intuitifs. Aujourd’hui, je mets cette expertise au service des PME pour les aider à digitaliser et optimiser leur fonctionnement.</p>
-        <p>Au plaisir d’échanger avec vous et de vous accompagner dans votre projet !</p>
-</div>
-
-    <!-- Contactez-moi -->
-    <div class="section">
-        <h2>Contactez-moi</h2>
-        <div class="contact-form">
-            <form>
-                <input type="text" name="nom" placeholder="Votre Nom" required>
-                <input type="email" name="email" placeholder="Votre Email" required>
-                <textarea name="message" placeholder="Votre message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">© 2025 PLOX INC - Tous droits réservés</div>
-
-    <!-- IntersectionObserver Animation Script -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let sections = document.querySelectorAll(".section");
-        let observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, { threshold: 0.3 });
-        
-        sections.forEach(section => {
-            section.style.opacity = "0";
-            section.style.transform = "translateY(20px)";
-            observer.observe(section);
-        });
-    });
+        function loadSection(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+
+        loadSection("header", "header.html");
+        loadSection("hero", "hero.html");
+        loadSection("pourquoi", "pourquoi.html");
+        loadSection("contact", "contact.html");
+        loadSection("footer", "footer.html");
     </script>
+
 </body>
 </html>
